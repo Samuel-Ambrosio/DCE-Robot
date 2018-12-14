@@ -1,21 +1,46 @@
-char letra;
-
+int count;
+String movement;
+String strAux;
 void setup(){
   Serial1.begin(9600);
+  count = 0;
 }
 
 void loop()
 {
-   Serial1.println("Giro Izquierda");
+   strAux = "-Giro Izquierda";
+   movement = count + strAux;
+   Serial1.println(movement);
+   count++;
    delay(2000);
-   Serial1.println("Avanzo");
+
+   strAux = "-Avanzo";
+   movement = count + strAux;
+   Serial1.println(movement);
+   count++;
    delay(2000);
-   Serial1.println("Giro Derecha");
+
+   strAux = "-Giro Derecha";
+   movement = count + strAux;
+   Serial1.println(movement);
+   count++;
    delay(2000);
-   Serial1.println("Giro Derecha");
+
+   strAux = "-Giro Derecha";
+   movement = count + strAux;
+   Serial1.println(movement);
+   count++;
    delay(2000);
-   Serial1.println("Avanzo");
+
+   strAux = "-Avanzo";
+   movement = count + strAux;
+   Serial1.println(movement);
+   count++;
    delay(2000);
-   Serial1.println("Giro Izquierda");
+
+   strAux = "-Giro Izquierda";
+   movement = count + strAux;
+   Serial1.println(movement);
+   count++;
    delay(2000);
 }

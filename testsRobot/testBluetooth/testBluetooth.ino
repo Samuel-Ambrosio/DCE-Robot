@@ -9,6 +9,8 @@ String strMD = "-Miro Derecha";
 String strMF = "-Miro Frente";
 String strMuro = "-Muro";
 
+bool principio = true;
+
 
 
 void setup(){
@@ -18,6 +20,11 @@ void setup(){
 
 void loop()
 {
+   if(principio)
+   {
+      delay(10000);
+      principio = false;
+   }
    movement = count + strMD;
    Serial1.println(movement);
    count++;

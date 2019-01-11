@@ -28,7 +28,7 @@ void loop()
    movement = count + strMD;
    Serial1.println(movement);
    count++;
-   delay(500);
+   delay(1000);
 
    movement = count + strMuro;
    Serial1.println(movement);
@@ -36,46 +36,6 @@ void loop()
    delay(500);
 
    movement = count + strMF;
-   Serial1.println(movement);
-   count++;
-   delay(500);
-
-   movement = count + strA;
-   Serial1.println(movement);
-   count++;
-   delay(2000);
-
-   movement = count + strMD;
-   Serial1.println(movement);
-   count++;
-   delay(500);
-
-   movement = count + strMuro;
-   Serial1.println(movement);
-   count++;
-   delay(500);
-
-   movement = count + strMF;
-   Serial1.println(movement);
-   count++;
-   delay(500);
-
-   movement = count + strMuro;
-   Serial1.println(movement);
-   count++;
-   delay(500);
-
-   movement = count + strMI;
-   Serial1.println(movement);
-   count++;
-   delay(500);
-
-   movement = count + strMF;
-   Serial1.println(movement);
-   count++;
-   delay(500);
-
-   movement = count + strGI;
    Serial1.println(movement);
    count++;
    delay(1000);
@@ -83,15 +43,5 @@ void loop()
    movement = count + strA;
    Serial1.println(movement);
    count++;
-   delay(2000);
-
-   movement = count + strGD;
-   Serial1.println(movement);
-   count++;
-   delay(1000);
-
-   movement = count + strG180;
-   Serial1.println(movement);
-   count++;
-   delay(4000);
+   delay(3000);
 }

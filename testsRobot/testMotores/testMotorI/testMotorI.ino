@@ -1,41 +1,44 @@
 /*
- * Programa de prueba del motor izquierdo que se encarga de hacer girar al eje
- * en ambos sentidos con esperas de 1s.
+ *  Programa de prueba del motor izquierdo que se encarga de hacer girar al eje
+ *  en ambos sentidos con esperas de 1s.
  */
+
 const int Pin1_motor = 10;
 const int Pin2_motor = 9;
 int SpeedMotor = 250; // Control de velocidad con el pwm
 
-void setup() {
-  pinMode(Pin1_motor, OUTPUT); 
-  pinMode(Pin2_motor, OUTPUT); 
+void setup()
+{
+    pinMode(Pin1_motor, OUTPUT); 
+    pinMode(Pin2_motor, OUTPUT); 
 }
 
 void Stop()
 {
-  analogWrite(Pin1_motor,0);
-  analogWrite(Pin2_motor,0);
+  digitalWrite(Pin1_motor,LOW);
+  digitalWrite(Pin2_motor,LOW);
 }
 
-void ReverseMotor(int SpeedMotor)
+void ReverseMotor()
 {
-  analogWrite(Pin1_motor,SpeedMotor);
-  analogWrite(Pin2_motor,0);
+  digitalWrite(Pin1_motor,HIGH);
+  digitalWrite(Pin2_motor,LOW);
 }
 
-void ForwardMotor(int SpeedMotor)
+void ForwardMotor()
 {  
-  analogWrite(Pin1_motor,0); 
-  analogWrite(Pin2_motor,SpeedMotor);
+  digitalWrite(Pin1_motor,LOW); 
+  digitalWrite(Pin2_motor,HIGH);
 }
 
-void loop() {
-  ReverseMotor(SpeedMotor);
-  delay (1000);
-  
-  Stop();
-  delay (1000);
-  
-  ForwardMotor(SpeedMotor);
-  delay(1000);
+void loop()
+{
+    ReverseMotor();
+    delay (1000);
+    
+    Stop();
+    delay (1000);
+    
+    ForwardMotor();
+    delay(1000);
 }

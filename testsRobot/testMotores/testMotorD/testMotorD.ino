@@ -13,29 +13,30 @@ void setup() {
 
 void Stop()
 {
-  analogWrite(Pin1_motorD,0);
-  analogWrite(Pin2_motorD,0);
+  digitalWrite(Pin1_motorD,LOW);
+  digitalWrite(Pin2_motorD,LOW);
 }
 
-void ReverseMotor(int SpeedMotor)
+
+void ReverseMotor()
 {
-  analogWrite(Pin1_motorD,SpeedMotor);
-  analogWrite(Pin2_motorD,0);
+  digitalWrite(Pin1_motorD,HIGH);
+  digitalWrite(Pin2_motorD,LOW);
 }
 
-void ForwardMotor(int SpeedMotor)
+void ForwardMotor()
 {  
-  analogWrite(Pin1_motorD,0); 
-  analogWrite(Pin2_motorD,SpeedMotor);
+  digitalWrite(Pin1_motorD,LOW); 
+  digitalWrite(Pin2_motorD,HIGH);
 }
 
 void loop() {
-  ReverseMotor(SpeedMotor);
+  ReverseMotor();
   delay (1000);
   
   Stop();
   delay (1000);
   
-  ForwardMotor(SpeedMotor);
+  ForwardMotor();
   delay(1000);
 }
